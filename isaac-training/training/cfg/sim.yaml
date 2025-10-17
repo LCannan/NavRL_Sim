@@ -26,3 +26,13 @@ sim:
   gpu_heap_capacity: 67108864
   gpu_temp_buffer_capacity: 16777216
   gpu_max_num_partitions: 8
+
+  # GPU buffers - 为 8GB VRAM 优化
+  # gpu_max_rigid_contact_count: 262144           # 从 524288 减半
+  # gpu_max_rigid_patch_count: 81920              # 从 163840 减半
+  # gpu_found_lost_pairs_capacity: 524288         # 从 1048576 进一步减小
+  # gpu_found_lost_aggregate_pairs_capacity: 1048576 # 从 2097152 减半
+  # gpu_total_aggregate_pairs_capacity: 524288    # 从 1048576 减半
+  # gpu_heap_capacity: 16777216                   # 保持 16MB，这是一个合理的基准值
+  # gpu_temp_buffer_capacity: 8388608             # 建议设置为 8MB
+  # gpu_max_num_partitions: 8                     # 保持不变

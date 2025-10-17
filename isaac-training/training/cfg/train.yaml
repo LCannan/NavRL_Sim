@@ -33,6 +33,6 @@ viewer:
 wandb:
   project: NavRL
   name: navigation_training
-  entity: CERLAB-UAV-RL-Navigation
+  entity: lcannan1984
   mode: offline # online
   run_id: #kw9xf9k9

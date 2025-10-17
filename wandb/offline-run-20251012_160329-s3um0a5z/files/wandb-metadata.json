@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+    "python": "3.10.18",
+    "heartbeatAt": "2025-10-12T08:03:30.177204",
+    "startedAt": "2025-10-12T08:03:29.021352",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3070",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/ljn/Code/NavRL/isaac-training/training/scripts/train.py",
+    "codePath": "isaac-training/training/scripts/train.py",
+    "git": {
+        "remote": "https://github.com/Zhefan-Xu/NavRL.git",
+        "commit": "3725bcc2e7c1be4ecf1455d922299ae85042603a"
+    },
+    "email": null,
+    "root": "/home/ljn/Code/NavRL",
+    "host": "ljn-B650M-GAMING-WIFI",
+    "username": "ljn",
+    "executable": "/home/ljn/miniconda3/envs/NavRL/bin/python"
+}

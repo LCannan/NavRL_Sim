@@ -24,22 +24,32 @@ import omni.client
 import omni.isaac.core.utils.nucleus as nucleus_utils
 
 # check nucleus connection
-if nucleus_utils.get_assets_root_path() is None:
-    msg = (
-        "Unable to perform Nucleus login on Omniverse. Assets root path is not set.\n"
-        "\tPlease check: https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/overview.html#omniverse-nucleus"
-    )
-    carb.log_error(msg)
-    raise RuntimeError(msg)
+# if nucleus_utils.get_assets_root_path() is None:
+#     msg = (
+#         "Unable to perform Nucleus login on Omniverse. Assets root path is not set.\n"
+#         "\tPlease check: https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/overview.html#omniverse-nucleus"
+#     )
+#     carb.log_error(msg)
+#     raise RuntimeError(msg)
 
-NVIDIA_NUCLEUS_DIR = f"{nucleus_utils.get_assets_root_path()}/NVIDIA"
+
+NVIDIA_NUCLEUS_DIR = "/home/ljn/isaac_sim_assets/Assets/Isaac/2023.1.1/NVIDIA"
 """Path to the root directory on the NVIDIA Nucleus Server."""
 
-ISAAC_NUCLEUS_DIR = f"{nucleus_utils.get_assets_root_path()}/Isaac"
+ISAAC_NUCLEUS_DIR = "/home/ljn/isaac_sim_assets/Assets/Isaac/2023.1.1/Isaac"
 """Path to the `Isaac` directory on the NVIDIA Nucleus Server."""
 
-ISAAC_ORBIT_NUCLEUS_DIR = f"{ISAAC_NUCLEUS_DIR}/Samples/Orbit"
+ISAAC_ORBIT_NUCLEUS_DIR = "/home/ljn/isaac_sim_assets/Assets/Isaac/2023.1.1/Isaac/Samples/Orbit"
 """Path to the `Isaac/Samples/Orbit` directory on the NVIDIA Nucleus Server."""
+
+# NVIDIA_NUCLEUS_DIR = f"{nucleus_utils.get_assets_root_path()}/NVIDIA"
+# """Path to the root directory on the NVIDIA Nucleus Server."""
+
+# ISAAC_NUCLEUS_DIR = f"{nucleus_utils.get_assets_root_path()}/Isaac"
+# """Path to the `Isaac` directory on the NVIDIA Nucleus Server."""
+
+# ISAAC_ORBIT_NUCLEUS_DIR = f"{ISAAC_NUCLEUS_DIR}/Samples/Orbit"
+# """Path to the `Isaac/Samples/Orbit` directory on the NVIDIA Nucleus Server."""
 
 
 def check_file_path(path: str) -> Literal[0, 1, 2]:

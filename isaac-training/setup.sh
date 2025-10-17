@@ -8,10 +8,11 @@ ENV_NAME="NavRL"
 
 # Load Conda environment handling
 eval "$(conda shell.bash hook)"
-conda create -n $ENV_NAME python=3.10
+# conda create -n $ENV_NAME python=3.10 -c conda-forge
 
 # Step 1: Setup Orbit
-echo "Setting up Orbit..."
+echo -e "\033[0;31mSetting up Orbit...\033[0m"
+
 # cd ../orbit
 cd ./third_party/orbit
 
@@ -36,17 +37,17 @@ pip install rospkg
 pip install matplotlib
 
 # Step 2: Install dependencies
-echo "Installing system dependencies..."
+echo -e "\033[0;31mInstalling system dependencies...\033[0m"
 sudo apt update && sudo apt install -y cmake build-essential
 
 # Install Orbit dependencies
-echo "Installing Orbit dependencies..."
+echo -e "\033[0;31mInstalling Orbit dependencies...\033[0m"
 ./orbit.sh --install
 # ./orbit.sh --extra
 
 
 # Step 3: Navigate to OmniDrones directory
-echo "Setting up OmniDrones..."
+echo -e "\033[0;31mSetting up OmniDrones...\033[0m"
 cd ../OmniDrones
 cp -r conda_setup/etc $CONDA_PREFIX
 
@@ -54,32 +55,29 @@ cp -r conda_setup/etc $CONDA_PREFIX
 conda activate $ENV_NAME
 
 # Verification
-echo "Verifying OmniIsaac Kit installation..."
+echo -e "\033[0;31mVerifying OmniIsaac Kit installation...\033[0m"
 python -c "from omni.isaac.kit import SimulationApp"
 
 # Step 4: Setup OmniDrones package
-echo "Setting up OmniDrones package..."
+echo -e "\033[0;31mSetting up OmniDrones package...\033[0m"
 cd ../OmniDrones
 pip install -e .
 
 # Step 5: Install TensorDict and dependencies
-echo "Installing TensorDict dependencies..."
+echo -e "\033[0;31mInstalling TensorDict dependencies...\033[0m"
 pip uninstall -y tensordict
 pip uninstall -y tensordict
 pip install tomli  # If missing 'tomli'
 cd ../tensordict
 python setup.py develop
 
-
 # Step 6: Install TorchRL
-echo "Installing TorchRL..."
+echo -e "\033[0;31mInstalling TorchRL...\033[0m"
 cd ../rl
 python setup.py develop
-
-
 
 # Check which torch is being used
 python -c "import torch; print(torch.__path__)"
 
-echo "Setup completed successfully!"
+echo -e "\033[0;31mSetup completed successfully!\033[0m"
 
