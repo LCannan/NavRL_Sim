@@ -109,3 +109,10 @@ isaac-training/training/scripts/outputs/
 isaac-training/third_party/warp/_build/
 
 isaac-training/outputs/
+
+# Ignore wandb
+wandb/
+outputs/
+
+# Ignore media
+media/
