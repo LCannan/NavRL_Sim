@@ -33,13 +33,13 @@ import omni.isaac.core.utils.nucleus as nucleus_utils
 #     raise RuntimeError(msg)
 
 
-NVIDIA_NUCLEUS_DIR = "/home/ljn/isaac_sim_assets/Assets/Isaac/2023.1.1/NVIDIA"
+NVIDIA_NUCLEUS_DIR = "/root/autodl-tmp/isaac-sim-assets/NVIDIA"
 """Path to the root directory on the NVIDIA Nucleus Server."""
 
-ISAAC_NUCLEUS_DIR = "/home/ljn/isaac_sim_assets/Assets/Isaac/2023.1.1/Isaac"
+ISAAC_NUCLEUS_DIR = "/root/autodl-tmp/isaac-sim-assets/Isaac"
 """Path to the `Isaac` directory on the NVIDIA Nucleus Server."""
 
-ISAAC_ORBIT_NUCLEUS_DIR = "/home/ljn/isaac_sim_assets/Assets/Isaac/2023.1.1/Isaac/Samples/Orbit"
+ISAAC_ORBIT_NUCLEUS_DIR = "/root/autodl-tmp/isaac-sim-assets/Isaac/Samples/Orbit"
 """Path to the `Isaac/Samples/Orbit` directory on the NVIDIA Nucleus Server."""
 
 # NVIDIA_NUCLEUS_DIR = f"{nucleus_utils.get_assets_root_path()}/NVIDIA"
